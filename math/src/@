@@ -1,0 +1,10 @@
+use std::env;
+
+fn main() {
+    let args: Vec<String> = env::args().collect();
+    let num1 = &args[1];
+    let oper = &args[2];
+    let num2 = &args[3];
+    let val = num1 oper num2;
+    println!("Result: {}", val);
+}
