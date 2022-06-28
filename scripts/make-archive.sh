@@ -9,9 +9,12 @@ cd ../list
 cargo build --release
 cd ../no
 cargo build --release
+cd ../rf
+cargo build --release
 cd ..
 mkdir bin
 mv list/target/release/list bin/
 mv no/target/release/no bin/
+mv rf/target/release/rf bin/
 tar -cvf archive/jd-utils-$ver.tar bin
 echo created jd-utils-$ver.tar from bin/ to archive/
