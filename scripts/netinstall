@@ -1,0 +1,17 @@
+#!/bin/bash
+RAND=$RANDOM
+git clone https://github.com/JaydenDev/jd-utils-rust /tmp/$RAND
+cd /tmp/$RAND/
+cd rf
+cargo build --release
+cd ..
+cd no
+cargo build --release
+cd ..
+cd list
+cargo build --release
+cd /tmp/$RAND
+sudo mv list/target/release/list /bin
+sudo mv rf/target/release/rf /bin
+sudo mv no/target/release/no /bin
+echo Installed!
