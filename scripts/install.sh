@@ -15,6 +15,6 @@ mkdir bin
 mv list/target/release/list bin/
 mv no/target/release/no bin/
 mv rf/target/release/rf bin/
-sudo mv bin/* /bin
+mv bin/* $HOME/.local/bin
 echo Installed!
 
